@@ -1,25 +1,19 @@
-# Next.js + Jest
+# Multi Tenant Architecture Via Subdomain
 
-This example shows how to configure Jest to work with Next.js.
+Using a mock database to display different information based on a subdomain.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+## Navigation
 
-## How to Use
+- [http://localhost:3000](http://localhost:3000) will take you to the default page
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+- [http://hello.localhost:3000](http://hello.localhost:3000) hello page
 
-In your terminal, run the following command:
+- [http://hey.localhost:3000](http://hey.localhost:3000) hey page
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app -- --example with-jest with-jest-app
-```
+- [http://hi.localhost:3000](http://hi.localhost:3000) hi page
 
-## Run Jest Tests
+- [http://yo.localhost:3000](http://yo.localhost:3000) yo page
 
-```bash
-npm test
-```
+- [http://does-not-exist.localhost:3000](http://does-not-exist.localhost:3000) error page
+
+- [http://does.not.exist.localhost:3000](http://does.not.exist.localhost:3000) error page
