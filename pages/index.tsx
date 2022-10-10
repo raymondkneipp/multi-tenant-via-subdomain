@@ -14,9 +14,7 @@ const Home: NextPage<Props> = ({ data }) => {
 			}}
 		>
 			<main className="container">
-				<a target="_blank" href="http://localhost:3000/">
-					back
-				</a>
+				<a href="http://localhost:3000/">back</a>
 				<section className="user-card">
 					<h1>{data.name}</h1>
 
