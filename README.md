@@ -19,7 +19,7 @@
 <h3 align="center">multi-tenant-via-subdomain</h3>
 
   <p align="center">
-	This is a demo app I built to display information from a mock database depending on the subdomain. This basic concept can be used to implement multi-tenant architecture into any app.
+  Demo app I built to display information from a mock database depending on the subdomain. This basic concept can be used to implement multi-tenant architecture into any app.
     <br />
     <a href="https://github.com/raymondkneipp/multi-tenant-via-subdomain"><strong>Explore the docs »</strong></a>
     <br />
