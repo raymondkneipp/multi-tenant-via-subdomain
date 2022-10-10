@@ -1,37 +1,40 @@
-import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
+import '../globals.css';
+
+import { useEffect, useState } from 'react';
+
+import type { AppProps } from 'next/app';
+import { DefaultPage } from '@/components/DefaultPage';
+import { ErrorPage } from '@/components/ErrorPage';
 
 export interface IDatabase {
-	key: string;
-	owner: string;
-	bio: string;
+	username: string;
+	name: string;
+	likes: string[];
 	color: string;
+	website: string;
 }
 
 const database: IDatabase[] = [
 	{
-		key: "hello",
-		owner: "raymond",
-		bio: "cool guy and awesome coder",
-		color: "coral",
+		username: 'rfkquery',
+		name: 'Raymond Kneipp',
+		likes: ['dogs', 'cats', 'squirrels', 'coding'],
+		color: 'skyblue',
+		website: 'https://raymondkneipp.com',
 	},
 	{
-		key: "hi",
-		owner: "tim",
-		bio: "an okay guy",
-		color: "cyan",
+		username: 'stolinski',
+		name: 'Scott Tolinski',
+		likes: ['bboying', 'music', 'tea', 'coding'],
+		color: 'gold',
+		website: 'https://scotttolinski.com/',
 	},
 	{
-		key: "hey",
-		owner: "anais",
-		bio: "coolest chick ever",
-		color: "plum",
-	},
-	{
-		key: "yo",
-		owner: "emily",
-		bio: "basic chick",
-		color: "springgreen",
+		username: 'wesbos',
+		name: 'Wes Bos',
+		likes: ['BBQ Tips', 'CSS', 'JavaScript', 'jokes'],
+		color: 'SpringGreen',
+		website: 'https://wesbos.com/',
 	},
 ];
 
@@ -40,17 +43,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	const [data, setData] = useState<IDatabase | undefined>(undefined);
 
 	useEffect(() => {
-		const host = window.location.host; // gets the full domain of app
+		// gets the full domain of app
+		const host = window.location.host;
 
-		// http://hi.hello.localhost:3000
-		// arr[0] = hi
-		// arr[1] = hello
-		// arr[2] = localhost:3000
-		const arr = host.split(".");
+		// http://hello.localhost:3000
+		// arr[0] = hello
+		// arr[1] = localhost:3000
+		const arr = host.split('.');
 
 		if (arr.length >= 3) {
-			// throw an error
-			console.log("an error occured");
+			console.log('an error occured');
 		} else {
 			setSubdomain(arr[0]);
 		}
@@ -59,16 +61,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		setData(
 			database.find((item: IDatabase) => {
-				return item.key === subdomain;
+				return item.username === subdomain;
 			})
 		);
 	}, [subdomain]);
 
 	if (data === undefined) {
-		if (subdomain === "localhost:3000") {
-			return <h1>Default page</h1>;
+		if (subdomain === 'localhost:3000') {
+			return <DefaultPage />;
 		}
-		return <h1>Error</h1>;
+		return <ErrorPage />;
 	}
 	return <Component {...pageProps} data={data} />;
 }
