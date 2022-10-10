@@ -118,6 +118,17 @@ Visiting different subdomains will display different information from a mock dat
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- RESOURCES -->
+
+## Resources
+
+For more information about creating a multi-tenant app visit the following links
+
+- [Blog post about multi-tenant architecture](https://www.raymondkneipp.com/posts/3-multi-tenant-architecture)
+- [Vercel Platforms Starter Kit](https://vercel.com/guides/nextjs-multi-tenant-application)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
