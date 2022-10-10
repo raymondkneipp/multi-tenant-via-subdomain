@@ -74,7 +74,7 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+For more information read [my blog post about multi-tenant architecture](https://www.raymondkneipp.com/posts/3-multi-tenant-architecture). To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -99,11 +99,13 @@ To get a local copy up and running follow these simple steps.
    npm run dev
    ```
 
-### How to Use
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
 
 Visiting different subdomains will display different information from a mock database.
-
-## Navigation
 
 | URL                                                                          | Results         |
 | ---------------------------------------------------------------------------- | --------------- |
@@ -113,14 +115,6 @@ Visiting different subdomains will display different information from a mock dat
 | [http://stolinski.localhost:3000](http://stolinski.localhost:3000)           | @stolinski page |
 | [http://does.not.exist.localhost:3000](http://does.not.exist.localhost:3000) | error page      |
 | [http://does-not-exist.localhost:3000](http://does-not-exist.localhost:3000) | error page      |
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Feel free to change the information presented on this webpage and create your own website.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
