@@ -74,7 +74,7 @@
 
 ## Getting Started
 
-For more information read [my blog post about multi-tenant architecture](https://www.raymondkneipp.com/posts/3-multi-tenant-architecture). To get a local copy up and running follow these simple steps.
+For more information read [my blog post about multi-tenant architecture](https://2022.raymondkneipp.com/posts/3-multi-tenant-architecture). To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
